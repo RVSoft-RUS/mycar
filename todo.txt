@@ -1,0 +1,4 @@
+http://localhost:8761/eureka уточнить хост в докере
+Добавить actuator
+Почему то через gateway не работает http://localhost:8077/mycar-client/time,
+    только напрямую http://asus:43637/time (http://localhost:43637/time)

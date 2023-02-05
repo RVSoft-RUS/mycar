@@ -11,7 +11,7 @@ public class TestController {
 
     @GetMapping("/time")
     public ResponseEntity<String> getTime() {
-        String time = LocalDateTime.now().toString();
+        String time = LocalDateTime.now().toString().concat("\n\nHello");
         return ResponseEntity.ok().body(time);
     }
 }
