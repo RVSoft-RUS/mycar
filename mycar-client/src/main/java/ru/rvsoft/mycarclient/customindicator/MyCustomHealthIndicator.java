@@ -6,7 +6,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-@Component
+@Component("renamedMyCustomHealthIndicator")
+//по умолчанию myCustom, меняем на renamedMyCustom
 public class MyCustomHealthIndicator implements HealthIndicator {
     private final ThreadLocalRandom threadLocalRandom = ThreadLocalRandom.current();
 
