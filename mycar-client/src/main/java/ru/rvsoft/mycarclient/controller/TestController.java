@@ -1,6 +1,8 @@
 package ru.rvsoft.mycarclient.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,11 +15,13 @@ import java.time.LocalDateTime;
 public class TestController {
     @Value("${eureka.instance.instance-id}")
     private String id;
-    @Value("${server.port}")
-    private String port;
+    @Autowired
+    Environment environment;
 
     @GetMapping("/test")
     public ResponseEntity<String> getTime() {
+        String port = environment.getProperty("local.server.port");
+
         String time = LocalDateTime.now().toString()
                 .concat("\n\n     port=" + port)
                 .concat("\n\n     id=" + id);
