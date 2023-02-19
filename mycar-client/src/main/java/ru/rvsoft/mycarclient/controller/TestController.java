@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 
 @RestController
-@RequestMapping("/main")
+//@RequestMapping("/main")
 public class TestController {
     @Value("${eureka.instance.instance-id}")
     private String id;
     @Value("${server.port}")
     private String port;
 
-    @GetMapping("/time")
+    @GetMapping("/test")
     public ResponseEntity<String> getTime() {
         String time = LocalDateTime.now().toString()
                 .concat("\n\n     port=" + port)

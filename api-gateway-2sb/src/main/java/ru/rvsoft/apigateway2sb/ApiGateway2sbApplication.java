@@ -1,13 +1,13 @@
-package ru.rvsoft.mycar.mycarclienttest;
+package ru.rvsoft.apigateway2sb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MycarClientTestApplication {
+public class ApiGateway2sbApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MycarClientTestApplication.class, args);
+        SpringApplication.run(ApiGateway2sbApplication.class, args);
     }
 
 }
